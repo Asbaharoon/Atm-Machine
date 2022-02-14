@@ -1,7 +1,7 @@
 # Atm-Machine
 Console (Full Functionality)
 
-#The use cando the Following ..
+#The user can do the Following ..
  > Balance
  > Deposit
  > Withdraw
