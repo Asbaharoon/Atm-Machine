@@ -4,19 +4,20 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Main {
-    static int options;
-    static int balance;
-    static int withdraw;
-    static int deposit;
-    static String transferPerson;
+    static int options = 0;
+    static int balance = 0;
+    static int withdraw = 0;
+    static int deposit = 0;
+    static String transferPerson = "";
+    static String userFirstName = "";
+    static String userLastName = "";
+    static BigInteger userID = BigInteger.valueOf(0);
+    static BigInteger pinID = BigInteger.valueOf(0);
 
     public static void main (String[]args){
         Scanner input = new Scanner(System.in);
-        String userFirstName = "";
-        String userLastName = "";
-        BigInteger userID = BigInteger.valueOf(0);
-        BigInteger pinID = BigInteger.valueOf(0);
-
+      
+      
 
         var select = new Options();
         var userRegister = new RegisterAccount(userFirstName, userLastName, userID, pinID);
@@ -52,7 +53,7 @@ public class Main {
             case 6:
                 System.out.println();
                 break;
-                
+
             default:
                 System.out.println(" ");
         }
