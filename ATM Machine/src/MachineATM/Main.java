@@ -10,7 +10,9 @@ public class Main {
         BigInteger userID = BigInteger.valueOf(0);
         BigInteger pinID = BigInteger.valueOf(0);
 
-
-        RegisterAccount userRegister = new RegisterAccount(userFirstName, userLastName, userID, pinID);
+        var select = new Options();
+        var userRegister = new RegisterAccount(userFirstName, userLastName, userID, pinID);
+        select.selectOptions();
+        select.Atm_Options();
     }
 }
