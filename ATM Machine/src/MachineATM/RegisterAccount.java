@@ -57,7 +57,7 @@ public class RegisterAccount {
 
     public void userData(String firstN, String lastN, BigInteger userID, BigInteger pinID){
         Scanner gatherData = new Scanner(System.in);
-    
+
         System.out.print(" Enter your Firstname: ");
         firstN = gatherData.nextLine();
 
@@ -77,13 +77,14 @@ public class RegisterAccount {
         System.out.println(" Lastname: " + lastN);
         System.out.println(" UserID: " + userID);
         System.out.println(" PinID: " + pinID);
-
+        System.out.println(" Account Successfully Registered ..");
         try {
            if(firstN.length() <= 1 || lastN.length() <= 1){
            throw new Exception();
            }
         }catch (Exception e){
-            System.out.println(" You need to refill up again Maam/Sir: " + firstN + " " + lastN);
+            System.out.println(" System is Exiting ..");
+            System.out.println(" Details are not Valid");
             System.out.println(" Proper Details is a must .. ");
         }
     }
