@@ -1,8 +1,5 @@
 package MachineATM;
 
-
-import javax.management.RuntimeErrorException;
-import java.io.IOException;
 import java.math.BigInteger;
 import java.util.Scanner;
 
@@ -10,15 +7,15 @@ public class RegisterAccount {
     private String firstName;
     private String lastName;
     private BigInteger userID;
-    private BigInteger pinID;
 
-    RegisterAccount(String firstName, String lastName, BigInteger userID, BigInteger pinID){
+
+    RegisterAccount(String firstName, String lastName, BigInteger userID){
         this.firstName = firstName;
         this.lastName = lastName;
         this.userID = userID;
-        this.pinID = pinID;
 
-        userData(firstName, lastName, userID, pinID);
+
+        userData(firstName, lastName, userID);
 
     }
 
@@ -47,15 +44,8 @@ public class RegisterAccount {
         return userID;
     }
 
-    public void setPinID(BigInteger pinID){
-        this.pinID = pinID;
-    }
 
-    public BigInteger getPinID(){
-        return pinID;
-    }
-
-    public void userData(String firstN, String lastN, BigInteger userID, BigInteger pinID){
+    public void userData(String firstN, String lastN, BigInteger userID){
         Scanner gatherData = new Scanner(System.in);
 
         System.out.print(" Enter your Firstname: ");
@@ -67,8 +57,6 @@ public class RegisterAccount {
         System.out.print(" Enter your userID: ");
         userID = gatherData.nextBigInteger();
 
-        System.out.print(" Enter your pinID: ");
-        pinID = gatherData.nextBigInteger();
 
         System.out.println();
 
@@ -76,7 +64,7 @@ public class RegisterAccount {
         System.out.println(" Firstname: " + firstN);
         System.out.println(" Lastname: " + lastN);
         System.out.println(" UserID: " + userID);
-        System.out.println(" PinID: " + pinID);
+
         System.out.println(" Account Successfully Registered ..");
         try {
            if(firstN.length() <= 1 || lastN.length() <= 1){
