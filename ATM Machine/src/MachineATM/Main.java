@@ -16,18 +16,19 @@ public class Main {
 
     public static void main (String[]args){
         Scanner input = new Scanner(System.in);
-      
-      
-
+        var security = new SecurityCheck();
         var select = new Options();
-        var userRegister = new RegisterAccount(userFirstName, userLastName, userID, pinID);
+        new RegisterAccount(userFirstName, userLastName, userID);
+
+        security.securityLogin();
+
         select.selectOptions();
         select.Atm_Options();
         options = input.nextInt();
 
         switch (options){
             case 1:
-                System.out.println();
+                System.out.println(" ");
                 break;
 
             case 2:
