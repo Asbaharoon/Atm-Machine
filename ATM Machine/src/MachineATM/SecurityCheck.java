@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class SecurityCheck {
     public void securityLogin(){
-        BigInteger userPin = BigInteger.valueOf(0);
-        BigInteger checkPIN = BigInteger.valueOf(0);
-        BigInteger pinUser = BigInteger.valueOf(0);
+        BigInteger userPin;
+        BigInteger checkPIN;
+        BigInteger pinUser;
         Scanner input = new Scanner(System.in);
         System.out.print(" Enter PIN ID to register ... ");
         pinUser = input.nextBigInteger();
@@ -22,7 +22,8 @@ public class SecurityCheck {
             System.out.println(" Successfully Log in ");
         }else{
             System.out.println(" Wrong PIN ..");
-
+            System.out.println(" System Exiting ... ");
+            System.exit(0);
         }
     }
 
