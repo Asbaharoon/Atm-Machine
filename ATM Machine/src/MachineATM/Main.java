@@ -18,8 +18,9 @@ public class Main {
         Scanner input = new Scanner(System.in);
         var security = new SecurityCheck();
         var select = new Options();
+        var randomBal = new RandomBalance();
         new RegisterAccount(userFirstName, userLastName, userID);
-
+        
         security.securityLogin();
 
         select.selectOptions();
