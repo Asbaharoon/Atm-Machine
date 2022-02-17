@@ -71,9 +71,10 @@ public class RegisterAccount {
            throw new Exception();
            }
         }catch (Exception e){
-            System.out.println(" System is Exiting ..");
             System.out.println(" Details are not Valid");
             System.out.println(" Proper Details is a must .. ");
+            System.out.println(" System is Exiting ..");
+            System.exit(0);
         }
     }
 
