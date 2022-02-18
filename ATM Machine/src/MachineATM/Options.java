@@ -12,6 +12,6 @@ public class Options implements UserAction {
 
     @Override
     public void selectOptions(){
-        System.out.println(" Select your Options.");
+        System.out.print(" Select your Options: ");
     }
 }
