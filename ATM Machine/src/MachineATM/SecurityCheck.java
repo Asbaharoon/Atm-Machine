@@ -9,11 +9,11 @@ public class SecurityCheck {
         BigInteger checkPIN;
         BigInteger pinUser;
         Scanner input = new Scanner(System.in);
-        System.out.print(" Enter PIN ID to register ... ");
+        System.out.print(" Enter PIN ID to register: ");
         pinUser = input.nextBigInteger();
 
         userPin = pinUser;
-        System.out.print(" Log in on your PIN ID to proceed .. ");
+        System.out.print(" Log in on your PIN ID to proceed: ");
         checkPIN = input.nextBigInteger();
 
         if(checkPIN.equals(userPin)){
